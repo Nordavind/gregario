@@ -1,0 +1,16 @@
+@use './base/basic' as basic;
+
+// Large (lg)
+@media screen and (max-width: 992px) {
+  @include basic.basic--lg(); //  base/basic.scss
+}
+
+// Medium (md)
+@media screen and (max-width: 768px) {
+  @include basic.basic--md(); //  base/basic.scss
+}
+
+// Small (sm)
+@media screen and (max-width: 576px) {
+  @include basic.basic--sm(); // base/basic.scss
+}

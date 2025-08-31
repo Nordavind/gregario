@@ -1,0 +1,38 @@
+@use '../utilities/variables' as vars;
+
+// variables Fuentes
+$font-gregario: 'DM Sans', sans-serif;
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+// encabezados
+h1 {
+  font-family: $font-gregario;
+  font-size: 68px;
+  line-height: 71px;
+  letter-spacing: 0.64px;
+  font-weight: 700;
+  background: linear-gradient(to right, #8194FF 0%, #E9C3AD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+// textos
+.semibold {
+  font-weight: 500;
+}
+
+p {
+  font-family: $font-gregario;
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+}
