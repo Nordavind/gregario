@@ -1,0 +1,219 @@
+// hero
+@use '../utilities/variables' as vars;
+
+.hero-container {
+  max-width: vars.$contenedor-width;
+  padding: 40px 30px 80px 30px;
+  margin: auto;
+  // overflow: hidden;
+
+  &.two-col {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+.hero-wrapper-a {
+  max-width: 50%;
+}
+
+.hero-wrapper-b {
+  max-width: 50%;
+  width: 50%;
+  /* fuerza que ocupe la mitad del contenedor padre */
+  overflow: hidden;
+}
+
+.hero-subwrapper-b {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  > :nth-child(1) {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 50px;
+    user-select: none;
+
+    img {
+      width: 170px;
+      height: 170px;
+      animation: spin 6s linear infinite; // usamos "spin" aquí
+    }
+  }
+
+  > :nth-child(2) {
+    position: absolute;
+    z-index: 2;
+    right: 40px;
+    bottom: 170px;
+    user-select: none;
+  }
+
+  > :nth-child(3) {
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+    bottom: 34px;
+    user-select: none;
+  }
+}
+
+.hero-video-wrapper {
+  margin: auto;
+  background-color: gray;
+  max-width: 100%;
+  width: 316px;
+  height: 560px;
+  border-radius: 23px;
+
+  > :nth-child(1) {
+    display: none;
+    user-select: none;
+  }
+
+  > :nth-child(2) {
+    display: none;
+    user-select: none;
+  }
+
+  > :nth-child(3) {
+    display: none;
+    user-select: none;
+  }
+}
+
+// keyframes
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin hero--lg() {
+  .hero-container {
+    padding: 80px 30px 80px 30px;
+
+    &.two-col {
+      flex-flow: column nowrap;
+      gap: 60px;
+    }
+  }
+
+  .hero-wrapper-a {
+    max-width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-wrapper-b {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-subwrapper-b {
+    > :nth-child(1) {
+      display: none;
+    }
+
+    > :nth-child(2) {
+      right: 40px;
+      bottom: 170px;
+    }
+
+    > :nth-child(3) {
+      left: 40px;
+      bottom: 34px;
+    }
+  }
+
+  .hero-video-wrapper {
+    position: relative;
+    z-index: 1;
+
+    > :nth-child(1) {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 10px;
+      right: 10px;
+
+      img {
+        width: 140px;
+        height: 140px;
+        animation: spin 6s linear infinite; // usamos "spin" aquí
+      }
+    }
+  }
+}
+
+@mixin hero--sm() {
+    .hero-container {
+    padding: 40px 20px 60px 20px;
+
+    &.two-col {
+      gap: 60px;
+    }
+  }
+
+  .hero-subwrapper-b {
+    > :nth-child(1) {
+      display: none;
+    }
+
+    > :nth-child(2) {
+      display: none;
+    }
+
+    > :nth-child(3) {
+      display: none;
+    }
+  }
+
+  .hero-video-wrapper {
+    > :nth-child(1) {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 10px;
+      right: 10px;
+
+      img {
+        width: 120px;
+        height: 120px;
+        animation: spin 6s linear infinite; // usamos "spin" aquí
+      }
+    }
+
+    > :nth-child(2) {
+      display: flex;
+      position: absolute;
+      z-index: 2;
+      bottom: 137px;
+      margin-left: 20px;
+      margin-right: 20px;
+      max-width: 100%;
+    }
+
+    > :nth-child(3) {
+      display: flex;
+      position: absolute;
+      z-index: 2;
+      bottom: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+      max-width: 100%;
+    }
+  }
+}

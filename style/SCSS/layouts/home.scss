@@ -1,0 +1,40 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// clients logos
+.clients-logos {
+  max-width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 40px;
+  align-items: center;
+
+  > :nth-child(1) {
+    max-width: 190px;
+  }
+}
+
+.post-header-wrapper {
+  max-width: 90%;
+  margin: auto;
+}
+
+// mobile - llamados en mobile.scss
+@mixin home--lg() {
+  .clients-logos {
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+
+    > :nth-child(1) {
+      max-width: 100%;
+    }
+  }
+}
+
+@mixin home--md() {
+  .post-header-wrapper {
+    max-width: 100%;
+  }
+}

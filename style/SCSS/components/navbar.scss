@@ -1,0 +1,129 @@
+// navbar
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// navbar container
+nav {
+  width: 100%;
+  max-width: vars.$contenedor-width;
+  margin: auto;
+  padding: 20px 30px 0px 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-navbar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-navbar-w {
+  width: 180px;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+// navlink base
+%navlink-base {
+  padding: 20px 0px;
+  text-decoration: none;
+  font-family: typo.$font-gregario;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: vars.$blanco;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: vars.$acento-a;
+  }
+}
+
+// navlist desktop
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 28px;
+  align-items: center;
+
+  .navlink {
+    @extend %navlink-base;
+  }
+}
+
+// navbar mobile
+.nav-deploy-link {
+  width: 50px;
+  height: 50px;
+  // display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease-in-out;
+  border: none;
+
+  &.active {
+    background-color: vars.$acento-c;
+  }
+}
+
+.nav-ico {
+  width: 20px;
+  height: 17px;
+}
+
+// navlist mobile
+.nav-list-mb {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  align-items: center;
+  padding-top: 20px;
+
+  .navlink {
+    @extend %navlink-base;
+  }
+}
+
+//navbar mobile deploy
+.nav-deploy {
+  position: absolute;
+  z-index: 999;
+  background: linear-gradient(#3a3fb6 0%, #353698 100%);
+  width: 100%;
+  right: 0px;
+  top: 95px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &.open {
+    height: 334px;
+    padding: 25px 0px 0px 0px;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin navbar--lg() {
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+  }
+}
+
+@mixin navbar--sm() {
+  nav {
+  width: 100%;
+  padding: 20px;
+}
+
+}

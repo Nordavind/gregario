@@ -1,10 +1,41 @@
+// basic
 @use '../utilities/variables' as vars;
 
+// Basico
+html {
+  scroll-behavior: smooth;
+}
 
+.container {
+  max-width: vars.$contenedor-width;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: auto;
+}
+
+// utils
+.pb {
+  padding-bottom: 100px;
+}
+
+// gradient
+.section-gradient-a {
+  background: radial-gradient(circle at top right, #3A3FB6 0%, #3A3FB6 30%, transparent 100%), #191C50;
+}
 
 // mobile - llamados en mobile.scss
 @mixin basic--lg() {}
 
 @mixin basic--md() {}
 
-@mixin basic--sm() {}
+@mixin basic--sm() {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pb {
+    padding-bottom: 60px;
+  }
+
+}
