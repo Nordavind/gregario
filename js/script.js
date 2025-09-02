@@ -17,4 +17,5 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleNavBar(navbar, navLink);
     }
   });
+
 });

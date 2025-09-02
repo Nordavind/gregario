@@ -140,7 +140,8 @@
             <div class="swiper-slide swiper-client-logo"><img src="./img/clients/papa-johns.svg" alt="papa johns"></div>
             <div class="swiper-slide swiper-client-logo"><img src="./img/clients/agrosuper.svg" alt="agrosuper"></div>
             <div class="swiper-slide swiper-client-logo"><img src="./img/clients/abinbev.svg" alt="ABinBev"></div>
-            <div class="swiper-slide swiper-client-logo"><img src="./img/clients/minutoverde.svg" alt="minuto verde"></div>
+            <div class="swiper-slide swiper-client-logo"><img src="./img/clients/minutoverde.svg" alt="minuto verde">
+            </div>
             <div class="swiper-slide swiper-client-logo"><img src="./img/clients/mccain.svg" alt="mcain"></div>
             <div class="swiper-slide swiper-client-logo"><img src="./img/clients/lala.svg" alt="lala"></div>
             <div class="swiper-slide swiper-client-logo"><img src="./img/clients/sigma.svg" alt="sigma"></div>
@@ -161,7 +162,8 @@
         </div>
       </div>
       <div class="post-header-wrapper pb">
-        <h2 class="h2-post-header" data-aos="fade-up">Una fuerza de ventas poderosa nace de la combinación entre estrategia, tecnología y
+        <h2 class="h2-post-header" data-aos="fade-up">Una fuerza de ventas poderosa nace de la combinación entre
+          estrategia, tecnología y
           acción en terreno.</h2>
       </div>
     </div>
@@ -171,6 +173,10 @@
   <script>
     AOS.init({
       once: false,
+      disable: function () {
+        // Desactiva animaciones solo en móviles ≤576px
+        return window.innerWidth <= 576;
+      }
     });
   </script>
 </body>

@@ -24,7 +24,11 @@ html {
 }
 
 // mobile - llamados en mobile.scss
-@mixin basic--lg() {}
+@mixin basic--lg() {
+  .section-gradient-a {
+    background: radial-gradient(circle at top right, #3A3FB6 0%, transparent 70%, transparent 100%), #191C50;
+  }
+}
 
 @mixin basic--md() {}
 
