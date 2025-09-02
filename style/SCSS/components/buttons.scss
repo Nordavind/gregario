@@ -36,6 +36,7 @@
   @extend %button-base;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 24px 35px;
   color: vars.$blanco;
@@ -92,7 +93,10 @@
 
 @mixin buttons--sm() {
   .button-wrapper {
+    flex-flow: column wrap;
     justify-content: center;
+    align-items: stretch; 
+    gap: 22px;
   }
 
   .button-solid-arrow,
