@@ -159,7 +159,7 @@
   max-width: 740px;
   height: 100%;
   z-index: 1;
-  background-image: url('/img/numbers-img.webp');
+  background-image: url('../img/numbers-img.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,10 +232,6 @@
   }
 
   .numbers-wrapper-img {
-    background-image: url('/img/numbers-img.webp');
-    background-size: cover;
     background-position: right;
-    background-repeat: no-repeat;
-    border-radius: 50px;
   }
 }
