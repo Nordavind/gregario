@@ -1,0 +1,119 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// Wrapper
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// Item
+.accordion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: vars.$dark-blue;
+  border-radius: 30px;
+  transition: background-color 0.3s ease-in-out;
+
+  &.active {
+    .accord-item-content {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 20px;
+    }
+
+    .accord-btn {
+      background-color: #F98B6B;
+
+      svg {
+        stroke: #313497;
+        transform: rotate(45deg) scale(1.1);
+      }
+    }
+
+    .h4-accord-title {
+      color: vars.$acento-d;
+    }
+  }
+}
+
+.accord-item-left {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.accord-item-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.h4-accord-title {
+  font-family: typo.$font-gregario;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 500;
+  color: vars.$blanco;
+  margin-bottom: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.p-accord-text {
+  font-family: typo.$font-gregario;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: vars.$blanco;
+  margin: 0;
+}
+
+.accord-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: vars.$light-blue;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+
+  &:not(.active):hover,
+  &:not(.active):focus {
+    background-color: vars.$acento-c;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: vars.$acento-d;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+    transition: transform 0.4s ease-in-out, stroke 0.3s ease-in-out;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin accordion--sm() {
+
+  .h4-accord-title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .p-accord-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

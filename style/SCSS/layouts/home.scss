@@ -14,9 +14,78 @@
   }
 }
 
+// post header
 .post-header-wrapper {
   max-width: 90%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// differences desktop component
+.differences-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.differences-btns {
+  width: 100%;
+  max-width: 1050px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.differences-center {
+  width: 100%;
+  max-width: 740px;
+  padding: 30px;
+  background-color: vars.$blue;
+  border-radius: 20px;
+  margin: 60px 0px 60px 0px;
+
+  p.diff-text {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
+.diff-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 27px 40px;
+  margin: 0;
+  font-family: typo.$font-gregario;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  color: vars.$blanco;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid vars.$blanco;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  min-width: 295px;
+
+  &.active {
+    border: 2px solid vars.$blue;
+    background-color: vars.$blue;
+  }
+
+  &:hover {
+    border: 2px solid vars.$acento-c;
+    background-color: vars.$acento-c;
+  }
+}
+
+// differences mobile
+.differences-wrapper-mb {
+  display: none;
 }
 
 // mobile - llamados en mobile.scss
@@ -30,6 +99,14 @@
     > :nth-child(1) {
       max-width: 100%;
     }
+  }
+
+  .differences-wrapper {
+    display: none;
+  }
+
+  .differences-wrapper-mb {
+    display: block;
   }
 }
 

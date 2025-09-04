@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-// clients logo swiper
+  // clients logo swiper
   const clientsLogosSwiper = new Swiper('.swiper-clients-logos', {
     slidesPerView: 'auto',
     spaceBetween: 40,

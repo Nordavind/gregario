@@ -46,12 +46,14 @@
   <!-- scripts -->
   <script defer src="./js/script.js"></script>
   <script defer src="./js/swiper-cfg.js"></script>
+  <script defer src="./js/differences.js"></script>
+  <script defer src="./js/accordion.js"></script>
 
   <!-- Google Tag Manager -->
 </head>
 
 <body>
-  <section class="section-gradient-a">
+  <div class="gradient-home">
     <nav>
       <a href="index.html" class="logo-navbar-wrapper"><img class="logo-navbar-w" src="./img/gregario-logo-w.svg"
           alt="logo gregario"></a>
@@ -131,7 +133,7 @@
       </div>
     </header>
     <div class="container">
-      <div class="clients-logos pb">
+      <div class="clients-logos mb">
         <div>
           <p class="semibold">Marcas que crecen con nosotros</p>
         </div>
@@ -167,13 +169,133 @@
           </div>
         </div>
       </div>
-      <div class="post-header-wrapper pb">
+      <div class="post-header-wrapper mb">
         <h2 class="h2-post-header" data-aos="fade-up">Una fuerza de ventas poderosa nace de la combinación entre
           estrategia, tecnología y
           acción en terreno.</h2>
       </div>
+      <div class="title-wrapper-a">
+        <p>Por eso creamos una plataforma que es un copiloto comercial que acompaña, guía y potencia a cada vendedor en
+          su recorrido comercial. Gregario se diferencia porque es:</p>
+      </div>
+      <div class="differences-wrapper">
+        <div class="differences-btns">
+          <button id="btnDiffA" class="diff-btn active">Inteligente 🧠</button>
+          <button id="btnDiffB" class="diff-btn">Estandarizado 😎</button>
+          <button id="btnDiffC" class="diff-btn">Completo ✅</button>
+        </div>
+        <div class="differences-center">
+          <p id="diffText" class="diff-text">No solo muestra datos: <span class="bold">recomienda acciones</span>.
+            Gregario guía al equipo para que cada visita tenga sentido y cada decisión esté respaldada por información
+            real.</p>
+        </div>
+        <div class="differences-btns">
+          <button id="btnDiffD" class="diff-btn">Escalable 🦾</button>
+          <button id="btnDiffE" class="diff-btn">Transparente 👁️</button>
+          <button id="btnDiffF" class="diff-btn">Ordenado 🤓</button>
+        </div>
+      </div>
+      <div class="differences-wrapper-mb">
+        <div class="accordion-wrapper">
+          <div class="accordion-item">
+            <div class="accord-item-left">
+              <h4 class="h4-accord-title">Inteligente 🧠</h4>
+              <div class="accord-item-content">
+                <p class="p-accord-text">No solo muestra datos: <span class="bold">recomienda acciones</span>. Gregario
+                  guía al equipo para que cada visita tenga sentido y cada decisión esté respaldada por información
+                  real.</p>
+              </div>
+            </div>
+            <button class="accord-btn">
+              <svg viewBox="0 0 20 20">
+                <line x1="4" y1="10" x2="16" y2="10" />
+                <line x1="10" y1="4" x2="10" y2="16" />
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-item">
+            <div class="accord-item-left">
+              <h4 class="h4-accord-title">Estandarizado 😎</h4>
+              <div class="accord-item-content">
+                <p class="p-accord-text">El volumen de ventas ya no es cuestión de suerte. Gregario convierte buenas prácticas en hábitos, ayudando a que <span class="bold">todos vendan mejor</span>.
+                </p>
+              </div>
+            </div>
+            <button class="accord-btn">
+              <svg viewBox="0 0 20 20">
+                <line x1="4" y1="10" x2="16" y2="10" />
+                <line x1="10" y1="4" x2="10" y2="16" />
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-item">
+            <div class="accord-item-left">
+              <h4 class="h4-accord-title">Completo ✅</h4>
+              <div class="accord-item-content">
+                <p class="p-accord-text"><span class="bold">Deja de vender solo lo fácil</span>. Gregario impulsa la venta total del portafolio, aumentando el valor de cada cliente sin esfuerzo adicional.</p>
+              </div>
+            </div>
+            <button class="accord-btn">
+              <svg viewBox="0 0 20 20">
+                <line x1="4" y1="10" x2="16" y2="10" />
+                <line x1="10" y1="4" x2="10" y2="16" />
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-item">
+            <div class="accord-item-left">
+              <h4 class="h4-accord-title">Escalable 🦾</h4>
+              <div class="accord-item-content">
+                <p class="p-accord-text"><span class="bold">Crece sin multiplicar el equipo</span>. Gregario mejora el
+                  rendimiento de tu fuerza actual para que puedas abarcar más ganando eficiencia.</p>
+              </div>
+            </div>
+            <button class="accord-btn">
+              <svg viewBox="0 0 20 20">
+                <line x1="4" y1="10" x2="16" y2="10" />
+                <line x1="10" y1="4" x2="10" y2="16" />
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-item">
+            <div class="accord-item-left">
+              <h4 class="h4-accord-title">Transparente 👁️</h4>
+              <div class="accord-item-content">
+                <p class="p-accord-text">Sabrás qué hace cada vendedor, cuándo, dónde y con quién. <span
+                    class="bold">Todo queda registrado</span> y visible, sin necesidad de perseguir a nadie.</p>
+              </div>
+            </div>
+            <button class="accord-btn">
+              <svg viewBox="0 0 20 20">
+                <line x1="4" y1="10" x2="16" y2="10" />
+                <line x1="10" y1="4" x2="10" y2="16" />
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-item">
+            <div class="accord-item-left">
+              <h4 class="h4-accord-title">Ordenado 🤓</h4>
+              <div class="accord-item-content">
+                <p class="p-accord-text">Haz que <span class="bold">todo el conocimiento quede en la empresa</span> y no
+                  en los vendedores. Ya no sufrirás por los cambios en el equipo.</p>
+              </div>
+            </div>
+            <button class="accord-btn">
+              <svg viewBox="0 0 20 20">
+                <line x1="4" y1="10" x2="16" y2="10" />
+                <line x1="10" y1="4" x2="10" y2="16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
     </div>
-  </section>
+  </div>
 
   <!-- AOS -->
   <script>

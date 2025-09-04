@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   //navbar
   const navbar = document.getElementById("navDeploy");
   const navLink = document.getElementById('navLink');

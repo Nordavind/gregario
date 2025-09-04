@@ -3,6 +3,7 @@
 @use './components/navbar' as navbar;
 @use './components/buttons' as buttons;
 @use './components/hero' as hero;
+@use './components/accordion' as accordion;
 @use './layouts/home' as home;
 
 // Large (lg)
@@ -28,4 +29,5 @@
   @include navbar.navbar--sm(); //  components/navbar.scss
   @include buttons.buttons--sm(); //  components/buttons.scss
   @include hero.hero--sm(); //  components/hero.scss
+  @include accordion.accordion--sm(); //  components/accordion.scss
 }

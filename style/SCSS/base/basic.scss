@@ -13,20 +13,34 @@ html {
   margin: auto;
 }
 
-// utils
-.pb {
-  padding-bottom: 100px;
+.title-wrapper-a {
+  max-width: 50%;
+  margin: auto;
+  margin-bottom: 60px;
+
+  p {
+    text-align: center;
+  }
 }
 
-// gradient
-.section-gradient-a {
+// utils
+.mb {
+  margin-bottom: 100px;
+}
+
+.nm {
+  margin-bottom: 0px;
+}
+
+// gradients
+.gradient-home {
   background: radial-gradient(circle at top right, #3A3FB6 0%, #3A3FB6 30%, transparent 100%), #191C50;
 }
 
 // mobile - llamados en mobile.scss
 @mixin basic--lg() {
-  .section-gradient-a {
-    background: radial-gradient(circle at top right, #3A3FB6 0%, transparent 70%, transparent 100%), #191C50;
+  .title-wrapper-a {
+    max-width: 100%;
   }
 }
 
@@ -38,8 +52,8 @@ html {
     padding-right: 20px;
   }
 
-  .pb {
-    padding-bottom: 60px;
+  .mb {
+    margin-bottom: 60px;
   }
 
 }
