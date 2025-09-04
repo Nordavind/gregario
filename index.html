@@ -39,15 +39,15 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <!-- purecounter-cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style/style.css">
 
   <!-- scripts -->
   <script defer src="./js/script.js"></script>
-  <script defer src="./js/swiper-cfg.js"></script>
-  <script defer src="./js/differences.js"></script>
-  <script defer src="./js/accordion.js"></script>
 
   <!-- Google Tag Manager -->
 </head>
@@ -82,7 +82,7 @@
     <header>
       <div class="hero-container two-col">
         <div class="hero-wrapper-a">
-          <h1 data-aos="fade-right" data-aos-delay="0">El copiloto de tu equipo de ventas.</h1>
+          <h1 class="h1-home" data-aos="fade-right" data-aos-delay="0">El copiloto de tu equipo de ventas.</h1>
           <p class="semibold" data-aos="fade-right" data-aos-delay="200">¿No sabes qué hacen tus vendedores? Venden por
             instinto, no por estrategia. Pierdes
             oportunidades por falta de seguimiento.</p>
@@ -178,7 +178,7 @@
         <p>Por eso creamos una plataforma que es un copiloto comercial que acompaña, guía y potencia a cada vendedor en
           su recorrido comercial. Gregario se diferencia porque es:</p>
       </div>
-      <div class="differences-wrapper">
+      <div class="differences-wrapper mb">
         <div class="differences-btns">
           <button id="btnDiffA" class="diff-btn active">Inteligente 🧠</button>
           <button id="btnDiffB" class="diff-btn">Estandarizado 😎</button>
@@ -195,7 +195,7 @@
           <button id="btnDiffF" class="diff-btn">Ordenado 🤓</button>
         </div>
       </div>
-      <div class="differences-wrapper-mb">
+      <div class="differences-wrapper-mobile mb">
         <div class="accordion-wrapper">
           <div class="accordion-item">
             <div class="accord-item-left">
@@ -217,7 +217,8 @@
             <div class="accord-item-left">
               <h4 class="h4-accord-title">Estandarizado 😎</h4>
               <div class="accord-item-content">
-                <p class="p-accord-text">El volumen de ventas ya no es cuestión de suerte. Gregario convierte buenas prácticas en hábitos, ayudando a que <span class="bold">todos vendan mejor</span>.
+                <p class="p-accord-text">El volumen de ventas ya no es cuestión de suerte. Gregario convierte buenas
+                  prácticas en hábitos, ayudando a que <span class="bold">todos vendan mejor</span>.
                 </p>
               </div>
             </div>
@@ -232,7 +233,8 @@
             <div class="accord-item-left">
               <h4 class="h4-accord-title">Completo ✅</h4>
               <div class="accord-item-content">
-                <p class="p-accord-text"><span class="bold">Deja de vender solo lo fácil</span>. Gregario impulsa la venta total del portafolio, aumentando el valor de cada cliente sin esfuerzo adicional.</p>
+                <p class="p-accord-text"><span class="bold">Deja de vender solo lo fácil</span>. Gregario impulsa la
+                  venta total del portafolio, aumentando el valor de cada cliente sin esfuerzo adicional.</p>
               </div>
             </div>
             <button class="accord-btn">
@@ -289,11 +291,39 @@
           </div>
         </div>
       </div>
-
-
-
-
-
+      <div class="title-wrapper-a">
+        <h3>Nuestro impacto en numeros</h3>
+      </div>
+      <div class="numbers-container">
+        <div class="numbers-wrapper">
+          <div class="numbers-col-a">
+            <div data-aos="fade-right" data-aos-delay="0">
+              <p><span class="white" id="numberOne">4</span><span>x</span></p>
+              <p>Tasa de creación de clientes</p>
+              <p>Aumenta 4 veces el número de de nuevos clientes de tu negocio.</p>
+            </div>
+            <div data-aos="fade-right" data-aos-delay="400">
+              <p><span>+</span><span class="white" id="numberTwo">90</span><span class="white">%</span></p>
+              <p>Tasa de uso de la app</p>
+              <p>9 de cada 10 vendedores en terreno usan nuestra aplicación.</p>
+            </div>
+          </div>
+          <div class="numbers-col-b">
+            <div data-aos="fade-right" data-aos-delay="200">
+              <p><span class="white" id="numberThree">23</span><span>%</span></p>
+              <p>Clientes exploran nuevas categorías</p>
+              <p>Empieza a vender productos que nunca te habían comprado.</p>
+            </div>
+            <div data-aos="fade-right" data-aos-delay="600">
+              <p><span>+</span><span class="white" id="numberFour">13</span><span class="white">pp</span></p>
+              <p>Cumplimiento de metas</p>
+              <p>Los vendedores mejoran su cumplimiento de metas en 13 puntos porcentuales, es decir, si antes cumplían
+                el 70% ahora cumplen el 83%.</p>
+            </div>
+          </div>
+        </div>
+        <div class="numbers-wrapper-img"></div>
+      </div>
     </div>
   </div>
 

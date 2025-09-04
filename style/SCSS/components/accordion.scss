@@ -107,6 +107,10 @@
 // mobile - llamados en mobile.scss
 @mixin accordion--sm() {
 
+  .accordion-item {
+    padding: 20px 25px;
+  }
+
   .h4-accord-title {
     font-size: 18px;
     line-height: 28px;
