@@ -5,7 +5,6 @@
   max-width: vars.$contenedor-width;
   padding: 40px 30px 80px 30px;
   margin: auto;
-  // overflow: hidden;
 
   &.two-col {
     display: flex;
@@ -22,7 +21,6 @@
 .hero-wrapper-b {
   max-width: 50%;
   width: 50%;
-  /* fuerza que ocupe la mitad del contenedor padre */
   overflow: hidden;
 }
 
@@ -41,7 +39,7 @@
     img {
       width: 170px;
       height: 170px;
-      animation: spin 6s linear infinite; // usamos "spin" aquí
+      animation: spin 6s linear infinite;
     }
   }
 
@@ -203,7 +201,7 @@
       img {
         width: 120px;
         height: 120px;
-        animation: spin 6s linear infinite; // usamos "spin" aquí
+        animation: spin 6s linear infinite;
       }
     }
 

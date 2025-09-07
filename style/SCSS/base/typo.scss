@@ -43,6 +43,16 @@ h2 {
     color: transparent;
     display: inline-block;
   }
+
+  &.h2-section-title-a {
+    background: linear-gradient(90deg, #6F73D5 0%, #6EACD6 50%, #00B3D5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
 }
 
 h3 {
@@ -50,9 +60,17 @@ h3 {
   font-size: 42px;
   line-height: 49px;
   font-weight: 600;
-  margin-bottom: 0px;
   color: vars.$blanco;
   margin-bottom: 30px;
+}
+
+h4 {
+  font-family: $font-gregario;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: vars.$bg-blue;
 }
 
 // textos
@@ -92,6 +110,12 @@ p {
     line-height: 68px;
     text-align: center;
   }
+
+  .h2-section-title-a {
+    font-size: 65px;
+    line-height: 68px;
+    text-align: center;
+  }
 }
 
 @mixin typo--sm() {
@@ -108,5 +132,10 @@ p {
     overflow-wrap: break-word;
     word-break: break-word;
     hyphens: auto;
+  }
+
+  .h2-section-title-a {
+    font-size: 50px;
+    line-height: 53px;
   }
 }

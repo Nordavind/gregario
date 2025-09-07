@@ -30,4 +30,5 @@
   @include buttons.buttons--sm(); //  components/buttons.scss
   @include hero.hero--sm(); //  components/hero.scss
   @include accordion.accordion--sm(); //  components/accordion.scss
+  @include home.home--sm(); //  layouts/home
 }

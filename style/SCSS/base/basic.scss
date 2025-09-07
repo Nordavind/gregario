@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #232359;
+}
+
 .container {
   max-width: vars.$contenedor-width;
   padding-left: 30px;
@@ -15,8 +19,14 @@ html {
 
 .title-wrapper-a {
   max-width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
   margin: auto;
   margin-bottom: 60px;
+
+  h2 {
+    text-align: center
+  }
 
   h3 {
     text-align: center
@@ -28,8 +38,20 @@ html {
 }
 
 // utils
+.mt {
+  margin-top: 100px;
+}
+
 .mb {
   margin-bottom: 100px;
+}
+
+.pb {
+  padding-bottom: 100px;
+}
+
+.pb-fix {
+  padding-bottom: 1px;
 }
 
 .nm {
@@ -38,7 +60,18 @@ html {
 
 // gradients
 .gradient-home {
-  background: radial-gradient(circle at top right, #3A3FB6 0%, #3A3FB6 30%, transparent 100%), #191C50;
+  background:
+    radial-gradient(circle at top right,
+      rgba(69, 81, 203, 0.7) 0%,
+      rgba(69, 81, 203, 0.35) 20%,
+      transparent 55%),
+    linear-gradient(20deg,
+      rgba(69, 81, 203, 0.8) 0%,
+      rgba(69, 81, 203, 0.4) 35%,
+      transparent 65%),
+    #232359;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // mobile - llamados en mobile.scss
@@ -56,8 +89,15 @@ html {
     padding-right: 20px;
   }
 
+  .mt {
+    margin-top: 60px;
+  }
+
   .mb {
     margin-bottom: 60px;
   }
 
+  .pb {
+    padding-bottom: 80px;
+  }
 }
