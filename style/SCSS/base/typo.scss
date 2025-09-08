@@ -53,6 +53,16 @@ h2 {
     display: inline-block;
     margin-bottom: 30px;
   }
+
+  &.h2-section-title-b {
+    background: linear-gradient(90deg, #8194FF 0%, #E9C3AD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
 }
 
 h3 {
@@ -105,16 +115,14 @@ p {
     margin-bottom: 30px;
   }
 
-  .h2-post-header {
-    font-size: 65px;
-    line-height: 68px;
-    text-align: center;
-  }
-
-  .h2-section-title-a {
-    font-size: 65px;
-    line-height: 68px;
-    text-align: center;
+  h2 {
+    &.h2-post-header,
+    .h2-section-title-a,
+    .h2-section-title-b {
+      font-size: 65px;
+      line-height: 68px;
+      text-align: center;
+    }
   }
 }
 
@@ -126,16 +134,18 @@ p {
     text-align: center;
   }
 
-  .h2-post-header {
-    font-size: 50px;
-    line-height: 53px;
-    overflow-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
-  }
+  h2 {
+    &.h2-post-header,
+    .h2-section-title-a,
+    .h2-section-title-b {
+      font-size: 50px;
+      line-height: 53px;
+    }
 
-  .h2-section-title-a {
-    font-size: 50px;
-    line-height: 53px;
+    &.h2-post-header {
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    }
   }
 }

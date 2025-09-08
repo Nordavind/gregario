@@ -33,6 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // testimonials swiper
+  const TestimonialsSwiper = new Swiper('.swiper-testimonials', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    freeMode: false,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    }
+  });
+
   // differences desktop
   const textMap = {
     btnDiffA: 'No solo muestra datos: <span class="bold">recomienda acciones</span>. Gregario guía al equipo para que cada visita tenga sentido y cada decisión esté respaldada por información real.',

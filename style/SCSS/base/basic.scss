@@ -25,16 +25,43 @@ body {
   margin-bottom: 60px;
 
   h2 {
-    text-align: center
+    text-align: center;
   }
 
   h3 {
-    text-align: center
+    text-align: center;
   }
 
   p {
     text-align: center;
   }
+}
+
+.title-wrapper-b {
+  max-width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+  margin-bottom: 60px;
+
+  h2 {
+    text-align: left;
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+.center-button-wrapper {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 // utils
@@ -78,6 +105,20 @@ body {
 @mixin basic--lg() {
   .title-wrapper-a {
     max-width: 100%;
+  }
+
+  .title-wrapper-b {
+    h2 {
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
   }
 }
 
