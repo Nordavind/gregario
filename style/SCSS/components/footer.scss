@@ -1,0 +1,95 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// footer
+footer {
+  padding: 100px 0px 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left,
+.nav-list-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-left {
+  gap: 60px;
+}
+
+.logo-navbar-w {
+  width: 140px;
+}
+
+.nav-list-footer {
+  gap: 30px;
+
+  .navlink {
+    padding: 20px 0px;
+    text-decoration: none;
+    font-family: typo.$font-gregario;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: vars.$blanco;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: vars.$acento-a;
+    }
+  }
+}
+
+.linkedin-link {
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin footer--md() {
+  footer {
+    padding: 80px 0px 60px 0px;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .nav-list-footer {
+    align-items: flex-start;
+    flex-flow: column nowrap;
+  }
+
+  .footer-left {
+    gap: 30px;
+  }
+
+  .nav-list-footer {
+    gap: 15px
+  }
+}
+
+@mixin footer--sm() {
+  footer {
+    padding: 60px 0px 40px 0px;
+    align-items: center;
+  }
+
+  .footer-left,
+  .nav-list-footer {
+    align-items: center;
+  }
+}

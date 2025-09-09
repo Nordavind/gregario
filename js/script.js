@@ -59,6 +59,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // ajusta altura de cards en swiper testimonials
+  function igualarAlturaCards() {
+    const cards = document.querySelectorAll('.swiper-testimonials .testimonial-card');
+    let alturaMax = 0;
+
+    // normaliza altura cards
+    cards.forEach(card => card.style.height = 'auto');
+
+    // calcula card mas alta
+    cards.forEach(card => {
+      if (card.offsetHeight > alturaMax) alturaMax = card.offsetHeight;
+    });
+
+    // aplica altura mas alta a todas las cards
+    cards.forEach(card => card.style.height = alturaMax + 'px');
+  }
+
+  // redimencionado cards
+  window.addEventListener('load', igualarAlturaCards);
+  window.addEventListener('resize', igualarAlturaCards);
+
   // differences desktop
   const textMap = {
     btnDiffA: 'No solo muestra datos: <span class="bold">recomienda acciones</span>. Gregario guía al equipo para que cada visita tenga sentido y cada decisión esté respaldada por información real.',

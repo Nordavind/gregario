@@ -315,7 +315,6 @@
 
 .testimonial-card {
   width: 100%;
-  min-height: 312px;
   padding: 30px;
   display: flex;
   flex-flow: column nowrap;
@@ -331,7 +330,6 @@
     }
   }
 }
-
 
 // mobile - llamados en mobile.scss
 @mixin home--lg() {
@@ -365,6 +363,7 @@
 
   .testimonials-right {
     width: 100%;
+    margin-top: 60px;
   }
 }
 

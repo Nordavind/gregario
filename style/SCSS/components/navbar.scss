@@ -122,8 +122,7 @@ nav {
 
 @mixin navbar--sm() {
   nav {
-  width: 100%;
-  padding: 20px;
-}
-
+    width: 100%;
+    padding: 20px;
+  }
 }

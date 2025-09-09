@@ -4,31 +4,36 @@
 @use './components/buttons' as buttons;
 @use './components/hero' as hero;
 @use './components/accordion' as accordion;
+@use './components/cta' as cta;
+@use './components/footer' as footer;
 @use './layouts/home' as home;
 
 // Large (lg)
 @media screen and (max-width: 992px) {
-  @include basic.basic--lg(); //  base/basic.scss
-  @include typo.typo--lg(); //  base/typo.scss
-  @include navbar.navbar--lg(); //  components/navbar.scss
-  @include buttons.buttons--lg(); //  components/buttons.scss
-  @include hero.hero--lg(); //  components/hero.scss
-  @include home.home--lg(); //  layouts/home
+  @include basic.basic--lg(); // base/basic.scss
+  @include typo.typo--lg(); // base/typo.scss
+  @include navbar.navbar--lg(); // components/navbar.scss
+  @include buttons.buttons--lg(); // components/buttons.scss
+  @include hero.hero--lg(); // components/hero.scss
+  @include home.home--lg(); // layouts/home
 }
 
 // Medium (md)
 @media screen and (max-width: 768px) {
-  @include basic.basic--md(); //  base/basic.scss
-  @include home.home--md(); //  layouts/home
+  @include basic.basic--md(); // base/basic.scss
+  @include cta.cta--md(); // components/cta
+  @include footer.footer--md(); // components/footer
+  @include home.home--md(); // layouts/home
 }
 
 // Small (sm)
 @media screen and (max-width: 576px) {
-  @include basic.basic--sm(); // base/basic.scss
-  @include typo.typo--sm(); //  base/typo.scss
-  @include navbar.navbar--sm(); //  components/navbar.scss
-  @include buttons.buttons--sm(); //  components/buttons.scss
-  @include hero.hero--sm(); //  components/hero.scss
-  @include accordion.accordion--sm(); //  components/accordion.scss
-  @include home.home--sm(); //  layouts/home
+  @include basic.basic--sm(); //base/basic.scss
+  @include typo.typo--sm(); // base/typo.scss
+  @include navbar.navbar--sm(); // components/navbar.scss
+  @include buttons.buttons--sm(); // components/buttons.scss
+  @include hero.hero--sm(); // components/hero.scss
+  @include accordion.accordion--sm(); // components/accordion.scss
+  @include footer.footer--sm(); // components/footer
+  @include home.home--sm(); // layouts/home
 }
