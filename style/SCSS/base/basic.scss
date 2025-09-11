@@ -1,7 +1,6 @@
-// basic
 @use '../utilities/variables' as vars;
 
-// Basico
+// basico
 html {
   scroll-behavior: smooth;
 }
@@ -95,6 +94,18 @@ body {
       rgba(69, 81, 203, 0.8) 0%,
       rgba(69, 81, 203, 0.4) 35%,
       transparent 65%),
+    #232359;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gradient-products {
+  background:
+    radial-gradient(circle at top right,
+      rgba(69, 81, 203, 0.7) 0%,
+      rgba(69, 81, 203, 0.5) 25%,
+      rgba(69, 81, 203, 0.35) 50%,
+      transparent 80%),
     #232359;
   background-repeat: no-repeat;
   background-size: cover;

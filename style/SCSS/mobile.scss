@@ -4,9 +4,11 @@
 @use './components/buttons' as buttons;
 @use './components/hero' as hero;
 @use './components/accordion' as accordion;
+@use './components/product-card' as product-card;
 @use './components/cta' as cta;
 @use './components/footer' as footer;
 @use './layouts/home' as home;
+@use './layouts/nuestros-productos' as nuestros-productos;
 
 // Large (lg)
 @media screen and (max-width: 992px) {
@@ -16,6 +18,7 @@
   @include buttons.buttons--lg(); // components/buttons.scss
   @include hero.hero--lg(); // components/hero.scss
   @include home.home--lg(); // layouts/home
+  @include nuestros-productos.nuestros-productos--lg(); // layouts/nuestros-productos
 }
 
 // Medium (md)
@@ -33,7 +36,8 @@
   @include navbar.navbar--sm(); // components/navbar.scss
   @include buttons.buttons--sm(); // components/buttons.scss
   @include hero.hero--sm(); // components/hero.scss
+  @include product-card.product-card--sm(); // components/product-card.scss
   @include accordion.accordion--sm(); // components/accordion.scss
   @include footer.footer--sm(); // components/footer
-  @include home.home--sm(); // layouts/home
+  @include nuestros-productos.nuestros-productos--sm(); // layouts/nuestros-productos
 }

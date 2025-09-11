@@ -1,7 +1,7 @@
-// buttons
 @use '../utilities/variables' as vars;
 @use '../base/typo' as typo;
 
+// buttons
 .button-wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -101,9 +101,6 @@
     background-color: vars.$acento-c;
   }
 }
-
-
-
 
 // mobile - llamados en mobile.scss
 @mixin buttons--lg() {

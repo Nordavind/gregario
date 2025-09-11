@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
   // clients logo swiper
   const clientsLogosSwiper = new Swiper('.swiper-clients-logos', {
     slidesPerView: 'auto',
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       disableOnInteraction: false,
     }
   });
+
 
   // testimonials swiper
   const TestimonialsSwiper = new Swiper('.swiper-testimonials', {
@@ -59,26 +61,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ajusta altura de cards en swiper testimonials
-  function igualarAlturaCards() {
-    const cards = document.querySelectorAll('.swiper-testimonials .testimonial-card');
+
+  // products swiper
+  const productsSwiper = new Swiper('.swiper-products-slider', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    freeMode: false,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
+    navigation: {
+      nextEl: '#productSliderBtnNext',
+      prevEl: '#productSliderBtnPrev',
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    }
+  });
+
+
+  // iguala alturas en swipers (testimonials y products)
+  function igualarAlturaCards(containerSelector, cardSelector) {
+    const cards = document.querySelectorAll(`${containerSelector} ${cardSelector}`);
+    if (!cards.length) return;
+
     let alturaMax = 0;
 
-    // normaliza altura cards
-    cards.forEach(card => card.style.height = 'auto');
+    // reset altura
+    cards.forEach(card => (card.style.height = 'auto'));
 
-    // calcula card mas alta
+    // calcula mas alta
     cards.forEach(card => {
       if (card.offsetHeight > alturaMax) alturaMax = card.offsetHeight;
     });
 
-    // aplica altura mas alta a todas las cards
-    cards.forEach(card => card.style.height = alturaMax + 'px');
+    // aplica a todas
+    cards.forEach(card => (card.style.height = alturaMax + 'px'));
   }
 
-  // redimencionado cards
-  window.addEventListener('load', igualarAlturaCards);
-  window.addEventListener('resize', igualarAlturaCards);
+  // ejecutar el cargar y redimensionar
+  function ajustarTodosLosSwipers() {
+    igualarAlturaCards('.swiper-testimonials', '.testimonial-card');
+    igualarAlturaCards('.swiper-products-slider', '.product-slider-card');
+  }
+
+  window.addEventListener('load', ajustarTodosLosSwipers);
+  window.addEventListener('resize', ajustarTodosLosSwipers);
+
 
   // differences desktop
   const textMap = {
@@ -112,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+
   // accordion
   const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -134,6 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.blur();
     });
   });
+
 
   // counter home
   new PureCounter({

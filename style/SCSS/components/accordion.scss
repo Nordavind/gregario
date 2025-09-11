@@ -1,14 +1,14 @@
 @use '../utilities/variables' as vars;
 @use '../base/typo' as typo;
 
-// Wrapper
+// wrapper
 .accordion-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-// Item
+// item
 .accordion-item {
   display: flex;
   justify-content: space-between;

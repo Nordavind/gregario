@@ -1,8 +1,7 @@
-// navbar
 @use '../utilities/variables' as vars;
 @use '../base/typo' as typo;
 
-// navbar container
+// navbar
 nav {
   width: 100%;
   max-width: vars.$contenedor-width;
@@ -91,7 +90,7 @@ nav {
   }
 }
 
-//navbar mobile deploy
+// navbar mobile deploy
 .nav-deploy {
   position: absolute;
   z-index: 999;

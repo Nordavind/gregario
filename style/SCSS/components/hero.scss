@@ -1,6 +1,6 @@
-// hero
 @use '../utilities/variables' as vars;
 
+// hero
 .hero-container {
   max-width: vars.$contenedor-width;
   padding: 40px 30px 80px 30px;
@@ -14,6 +14,7 @@
   }
 }
 
+// home
 .hero-wrapper-a {
   max-width: 50%;
 }
@@ -106,6 +107,19 @@
   }
 }
 
+// nuestros productos
+.hero-wrapper-products-a {
+  width: 50%;
+}
+
+.hero-wrapper-products-b {
+  width: 50%;
+
+  img {
+    max-width: 100%;
+  }
+}
+
 // mobile - llamados en mobile.scss
 @mixin hero--lg() {
   .hero-container {
@@ -163,6 +177,26 @@
         height: 140px;
         animation: spin 6s linear infinite; // usamos "spin" aquí
       }
+    }
+  }
+
+  .hero-wrapper-products-a {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-wrapper-products-b {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+
+    img {
+      max-width: 100%;
     }
   }
 }

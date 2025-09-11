@@ -83,7 +83,7 @@
   }
 }
 
-// differences mobile
+// differences mobile (components/accordion)
 .differences-wrapper-mobile {
   display: none;
 }
@@ -159,10 +159,7 @@
   max-width: 740px;
   height: 100%;
   z-index: 1;
-  background-image: url('../img/numbers-img.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../img/numbers-img.webp) no-repeat center / cover;
   border-radius: 50px;
 }
 
@@ -249,52 +246,6 @@
     position: absolute;
     top: 0px;
     z-index: 1;
-  }
-}
-
-.product-card {
-  background-color: rgba(58, 63, 182, 0.7);
-  padding: 30px;
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 30px;
-  align-items: center;
-  border-radius: 60px;
-  position: relative;
-  z-index: 2;
-}
-
-.product-card-content {
-  width: 50%;
-
-  .product-name-wrapper-a,
-  .product-name-wrapper-b {
-    display: inline-block;
-    padding: 18px 45px;
-    border-radius: 100px;
-    margin-bottom: 30px;
-  }
-
-  .product-name-wrapper-a {
-    background-color: vars.$acento-b;
-  }
-
-  .product-name-wrapper-b {
-    background-color: vars.$acento-c;
-  }
-}
-
-.product-card-img {
-  width: 50%;
-  height: 600px;
-  border-radius: 40px;
-
-  &.product-img-1 {
-    background: url(../img/home-product-1.webp) no-repeat center / cover;
-  }
-
-  &.product-img-2 {
-    background: url(../img/home-product-2.webp) no-repeat center / cover;
   }
 }
 
@@ -412,31 +363,5 @@
 
   .sales-copilot-container {
     display: none;
-  }
-}
-
-@mixin home--sm() {
-  .product-card {
-    flex-flow: column nowrap;
-  }
-
-  .product-card-content {
-    width: 100%;
-    order: 2;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-    h3,
-    h4,
-    p {
-      text-align: center;
-    }
-  }
-
-  .product-card-img {
-    width: 100%;
-    height: 300px;
-    order: 1;
   }
 }

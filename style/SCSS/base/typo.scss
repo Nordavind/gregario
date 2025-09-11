@@ -24,6 +24,19 @@ h1 {
     color: transparent;
     display: inline-block;
   }
+
+  &.h1-products {
+    background: linear-gradient(to right, #8194ff 0%, #48b0c8 50%, #48b0c8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+
+    span {
+      font-size: 40px;
+    }
+  }
 }
 
 h2 {
@@ -83,6 +96,15 @@ h4 {
   color: vars.$bg-blue;
 }
 
+h5 {
+  font-family: $font-gregario;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: vars.$blue;
+}
+
 // textos
 .semibold {
   font-weight: 500;
@@ -107,7 +129,6 @@ p {
 
 // mobile - llamados en mobile.scss
 @mixin typo--lg() {
-
   h1 {
     font-size: 65px;
     line-height: 68px;
@@ -124,14 +145,24 @@ p {
       text-align: center;
     }
   }
+
+  h5 {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 @mixin typo--sm() {
-
   h1 {
     font-size: 50px;
     line-height: 53px;
     text-align: center;
+
+    &.h1-products {
+      span {
+        font-size: 50px;
+      }
+    }
   }
 
   h2 {
