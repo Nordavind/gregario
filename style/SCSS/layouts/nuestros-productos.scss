@@ -134,7 +134,14 @@
     flex-flow: column nowrap;
     align-items: center;
 
-    h5, p {
+    h5,
+    p {
+      text-align: center;
+    }
+  }
+
+  .product-slider-card-title-wrapper {
+    h4 {
       text-align: center;
     }
   }
