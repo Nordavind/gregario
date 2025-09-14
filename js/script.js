@@ -49,15 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 40,
     loop: true,
     speed: 1500,
-    freeMode: true,
-    freeModeMomentum: false,
     allowTouchMove: false,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
+      pauseOnMouseEnter: false,
     }
   });
-
 
   // testimonials swiper
   const TestimonialsSwiper = new Swiper('.swiper-testimonials', {
