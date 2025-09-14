@@ -1,6 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // links navegacion modulares
+  const mainMenu = [
+    { href: "index.html", text: "Inicio", class: "navlink" },
+    { href: "nuestros-productos.html", text: "Nuestros Productos", class: "navlink" },
+    { href: "sobre-nosotros.html", text: "Sobre Nosotros", class: "navlink" },
+    { href: "mailto:join@gregario.com", text: "Quiero unirme", class: "button-outline-navbar" }
+  ];
 
-  //navbar
+  const footerMenu = [
+    { href: "index.html#inicio", text: "Inicio", class: "navlink" },
+    { href: "nuestros-productos.html#inicio", text: "Nuestros Productos", class: "navlink" },
+    { href: "sobre-nosotros.html#inicio", text: "Sobre Nosotros", class: "navlink" },
+    { href: "mailto:join@gregario.com", text: "Quiero Unirme", class: "navlink" }
+  ];
+
+  function buildMenu(items) {
+    return items
+      .map(item => `<li><a href="${item.href}" class="${item.class}">${item.text}</a></li>`)
+      .join("");
+  }
+
+  document.getElementById("navListDesktop").innerHTML = buildMenu(mainMenu);
+  document.getElementById("navListMobile").innerHTML = buildMenu(mainMenu);
+  document.getElementById("navListFooter").innerHTML = buildMenu(footerMenu);
+
+  // navbar
   const navbar = document.getElementById("navDeploy");
   const navLink = document.getElementById('navLink');
   const navList = navbar.querySelector('ul');
@@ -24,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 'auto',
     spaceBetween: 40,
     loop: true,
-    speed: 1000,
+    speed: 1500,
     freeMode: true,
     freeModeMomentum: false,
     allowTouchMove: false,

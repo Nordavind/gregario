@@ -67,6 +67,10 @@ body {
   margin-top: 100px;
 }
 
+.mt-sp {
+  margin-top: 100px;
+}
+
 .mb {
   margin-bottom: 100px;
 }
@@ -118,17 +122,16 @@ body {
   }
 
   .title-wrapper-b {
-    h2 {
-      text-align: center;
-    }
 
-    h3 {
-      text-align: center;
-    }
-
+    h2,
+    h3,
     p {
       text-align: center;
     }
+  }
+
+  .mt-sp {
+    margin-top: 72px;
   }
 }
 
@@ -140,7 +143,8 @@ body {
     padding-right: 20px;
   }
 
-  .mt {
+  .mt,
+  .mt-sp {
     margin-top: 60px;
   }
 

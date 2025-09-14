@@ -27,6 +27,7 @@
   @include cta.cta--md(); // components/cta
   @include footer.footer--md(); // components/footer
   @include home.home--md(); // layouts/home
+  @include nuestros-productos.nuestros-productos--md(); // layouts/nuestros-productos
 }
 
 // Small (sm)

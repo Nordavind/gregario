@@ -32,10 +32,10 @@ h1 {
     background-clip: text;
     color: transparent;
     display: inline-block;
+  }
 
-    span {
-      font-size: 40px;
-    }
+  span {
+    font-size: 40px;
   }
 }
 
@@ -76,6 +76,10 @@ h2 {
     display: inline-block;
     margin-bottom: 30px;
   }
+
+  span {
+    font-size: 40px;
+  }
 }
 
 h3 {
@@ -85,6 +89,15 @@ h3 {
   font-weight: 600;
   color: vars.$blanco;
   margin-bottom: 30px;
+
+  &.h3-section-title-a {
+    background: linear-gradient(90deg, #8194FF 0%, #E08081 50%, #F98B6B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
 }
 
 h4 {
@@ -94,6 +107,12 @@ h4 {
   font-weight: 700;
   margin-bottom: 0px;
   color: vars.$bg-blue;
+
+  &.h4-white {
+    font-weight: 600;
+    color: vars.$blanco;
+    margin-bottom: 30px;
+  }
 }
 
 h5 {
@@ -137,11 +156,12 @@ p {
   }
 
   h2 {
+
     &.h2-post-header,
-    .h2-section-title-a,
-    .h2-section-title-b {
-      font-size: 65px;
-      line-height: 68px;
+    &.h2-section-title-a,
+    &.h2-section-title-b {
+      font-size: 60px;
+      line-height: 63px;
       text-align: center;
     }
   }
@@ -158,25 +178,22 @@ p {
     line-height: 53px;
     text-align: center;
 
-    &.h1-products {
-      span {
-        font-size: 50px;
-      }
+    span {
+      font-size: 50px;
     }
   }
 
   h2 {
+
     &.h2-post-header,
-    .h2-section-title-a,
-    .h2-section-title-b {
-      font-size: 50px;
-      line-height: 53px;
+    &.h2-section-title-a,
+    &.h2-section-title-b {
+      font-size: 42px;
+      line-height: 49px;
     }
 
-    &.h2-post-header {
-      overflow-wrap: break-word;
-      word-break: break-word;
-      hyphens: auto;
+    span {
+      font-size: 42px;
     }
   }
 }
