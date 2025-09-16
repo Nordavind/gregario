@@ -75,6 +75,10 @@ body {
   margin-bottom: 100px;
 }
 
+.pt {
+  padding-top: 100px;
+}
+
 .pb {
   padding-bottom: 100px;
 }
@@ -115,6 +119,11 @@ body {
   background-size: cover;
 }
 
+// fondos color
+.blue-light-bg {
+  background-color: vars.$blue;
+}
+
 // mobile - llamados en mobile.scss
 @mixin basic--lg() {
   .title-wrapper-a {
@@ -150,6 +159,10 @@ body {
 
   .mb {
     margin-bottom: 60px;
+  }
+
+  .pt {
+    padding-top: 80px;
   }
 
   .pb {
