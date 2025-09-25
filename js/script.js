@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     freeMode: false,
     autoplay: {
-      delay: 2000,
+      delay: 3000,
       disableOnInteraction: true,
     },
     breakpoints: {
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     freeMode: false,
     autoplay: {
-      delay: 2000,
+      delay: 3000,
       disableOnInteraction: true,
     },
     navigation: {
