@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
   // testimonials swiper
   const TestimonialsSwiper = new Swiper('.swiper-testimonials', {
     slidesPerView: 2,
@@ -112,6 +113,21 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 2,
         spaceBetween: 30,
       },
+    }
+  });
+
+  
+  // nosotros swiper
+  const nosotrosSwiper = new Swiper('.swiper-nosotros', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    loop: true,
+    speed: 15000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
     }
   });
 

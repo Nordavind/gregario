@@ -124,6 +124,10 @@ body {
   background-color: vars.$blue;
 }
 
+.blue-dark-bg {
+  background-color: vars.$blue-5;
+}
+
 // mobile - llamados en mobile.scss
 @mixin basic--lg() {
   .title-wrapper-a {

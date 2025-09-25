@@ -1,0 +1,222 @@
+@use '../utilities/variables' as vars;
+@use '../base/typo' as typo;
+
+// nosotros postheader
+.nosotros-post-header-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 40px;
+
+  div {
+    width: 50%;
+
+    p {
+      &:nth-of-type(2) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+// slider nosotros
+.swiper-wrapper-marquee-nosotros {
+  transition-timing-function: linear !important;
+}
+
+.nosotros-slide {
+  width: 1280px;
+  height: 470px;
+
+  &.slide-1 {
+    background: url(../img/nosotros-slider-1.webp) no-repeat center / cover;
+  }
+
+  &.slide-2 {
+    background: url(../img/nosotros-slider-2.webp) no-repeat center / cover;
+  }
+
+  &.slide-3 {
+    background: url(../img/nosotros-slider-3.webp) no-repeat center / cover;
+  }
+}
+
+// mision vision
+.mis-vis-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 60px;
+  justify-content: space-between;
+
+  .mis-vis-item-a {
+    max-width: 40%;
+  }
+
+  .mis-vis-item-b {
+    max-width: 50%;
+  }
+}
+
+// founders
+.founders-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.founder-card {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: vars.$blue-5;
+  border-radius: 30px;
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .founder-card-up {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    align-items: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 300px;
+    }
+
+    p:nth-of-type(1) {
+      font-size: 34px;
+      line-height: 46px;
+      font-weight: 600;
+      margin-bottom: 0px;
+    }
+
+    p:nth-of-type(2) {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 500;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// team grid
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 60px;
+  justify-items: center;
+}
+
+.team-card {
+  max-width: 260px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  align-items: center;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 300px;
+  }
+
+  .member-name-wrapper {
+    width: 100%;
+
+    p:nth-of-type(1) {
+      font-size: 24px;
+      line-height: 34px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    p:nth-of-type(2) {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 200;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// mobile - llamados en mobile.scss
+@mixin sobre-nosotros--lg() {
+  .mis-vis-wrapper {
+    flex-flow: column nowrap;
+    gap: 0px;
+    justify-content: center;
+    text-align: center;
+
+    .mis-vis-item-a,
+    .mis-vis-item-b {
+      max-width: 100%;
+    }
+  }
+}
+
+@mixin sobre-nosotros--md() {
+
+  .nosotros-post-header-wrapper {
+    flex-flow: column nowrap;
+    gap: 0px;
+
+    div {
+      width: 100%;
+
+      p {
+        text-align: center;
+
+        &:nth-of-type(2) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .founders-wrapper {
+    flex-flow: column nowrap;
+    gap: 30px;
+  }
+
+  .founder-card {
+    width: 100%;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@mixin sobre-nosotros--sm() {
+  .founder-card {
+    justify-content: center;
+    text-align: center;
+
+    .founder-card-up {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  .team-grid {
+    row-gap: 40px;
+  }
+
+  .team-card {
+    max-width: 100%;
+    width: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+  }
+}

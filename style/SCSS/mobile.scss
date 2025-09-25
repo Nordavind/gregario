@@ -9,6 +9,7 @@
 @use './components/footer' as footer;
 @use './layouts/home' as home;
 @use './layouts/nuestros-productos' as nuestros-productos;
+@use './layouts/sobre-nosotros' as sobre-nosotros;
 
 // Large (lg)
 @media screen and (max-width: 992px) {
@@ -19,6 +20,7 @@
   @include hero.hero--lg(); // components/hero.scss
   @include home.home--lg(); // layouts/home
   @include nuestros-productos.nuestros-productos--lg(); // layouts/nuestros-productos
+  @include sobre-nosotros.sobre-nosotros--lg(); // layouts/sobre-nosotros
 }
 
 // Medium (md)
@@ -28,6 +30,7 @@
   @include footer.footer--md(); // components/footer
   @include home.home--md(); // layouts/home
   @include nuestros-productos.nuestros-productos--md(); // layouts/nuestros-productos
+  @include sobre-nosotros.sobre-nosotros--md(); // layouts/sobre-nosotros
 }
 
 // Small (sm)
@@ -41,4 +44,5 @@
   @include accordion.accordion--sm(); // components/accordion.scss
   @include footer.footer--sm(); // components/footer
   @include nuestros-productos.nuestros-productos--sm(); // layouts/nuestros-productos
+  @include sobre-nosotros.sobre-nosotros--sm(); // layouts/sobre-nosotros
 }

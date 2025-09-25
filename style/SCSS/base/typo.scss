@@ -34,6 +34,16 @@ h1 {
     display: inline-block;
   }
 
+  &.h1-nosotros {
+    text-align: center;
+    background: linear-gradient(#8194FF 0%, #8194FF 10%, #E08081 40%, #F09B6E 60%, #E9C3AD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
   span {
     font-size: 40px;
   }
